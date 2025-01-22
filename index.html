@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario empresas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="body">
+    <main class="body__main">
+        <form class="form__company" action="company.php" method="post">
+            <h2>Formulario para registrar una compañia</h2>
+            <label>
+                cif:
+                <input type="text" name="cif" placeholder="Introduce el numero de cif">
+            </label>
+
+            <label>
+                pais:
+                <input type="text" name="country" placeholder="Introduce el pais de la compania">
+            </label>
+
+            <label>
+                nombre:
+                <input type="text" name="name" placeholder="Introduce el nombre de la empresa">
+            </label>
+
+            <button type="submit"> crear empresa</button>
+        </form>
+
+        <form class="form__clients" action="clients.php" method="post">
+            <h2>Formulario para registrar un empleado</h2>
+
+
+            <label>
+                cif:
+                <input type="text" name="cif" placeholder="Introduce el cif de la compania">
+            </label>
+
+            <label>
+                nombre:
+                <input type="text" name="name" placeholder="Introduce el nombre de la empresa">
+            </label>
+
+            <label>
+                dni:
+                <input type="text" name="dni" placeholder="Introduce tu dni">
+            </label>
+            <label>
+                apellidos:
+                <input type="text" name="lastName" placeholder="Introduce tus apellidos">
+            </label>
+
+            <label>
+                poblacion:
+                <input type="text" name="poblation" placeholder="Introduce tu poblacion">
+            </label>
+
+            <label>
+                telefono:
+                <input type="tel" name="phone" placeholder="Introduce tu telefono">
+            </label>
+            <button type="submit">craer empleado</button>
+        </form>
+    </main>
+
+</body>
+
+</html>

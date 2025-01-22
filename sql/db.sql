@@ -1,0 +1,20 @@
+DROP DATABASE IF EXISTS company;
+CREATE DATABASE company;
+
+USE company;
+
+CREATE TABLE company (
+cif char(10) NOT NULL PRIMARY KEY,
+ country VARCHAR(100) NOT NULL,
+ name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE empleados (
+dni char(9) NOT NULL PRIMARY KEY,
+cif char(10),
+name VARCHAR(50) NOT NULL,
+lastName VARCHAR(100) NOT NULL,
+ poblation VARCHAR(100) NOT NULL,
+ phone char(11),
+ FOREIGN KEY(cif) REFERENCES company (cif) ON DELETE CASCADE ON UPDATE CASCADE 
+)

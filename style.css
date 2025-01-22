@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.body{
+    display: flex;
+    min-height: 100dvh;
+}
+
+.body__main{
+    display: flex;
+    gap: 2em;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__company,  .form__clients {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 1em;
+    background-color: rgb(145, 145, 227);
+    max-width: 600px;
+    width: 100%;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+}
+
+input{
+    padding: 1em;
+}
+
+
