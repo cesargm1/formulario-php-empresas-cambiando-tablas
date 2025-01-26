@@ -6,7 +6,6 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     return;
 }
 
-$cif = $_REQUEST['cif'] ?? '';
 $name = $_REQUEST['name'] ?? '';
 $dni = $_REQUEST['dni'] ?? '';
 $lastName = $_REQUEST['lastName'] ?? '';
@@ -14,14 +13,14 @@ $poblation = $_REQUEST['poblation'] ?? '';
 $phone = $_REQUEST['phone'] ?? '';
 
 
-$sql__insert_clients = "INSERT INTO empleados  (cif ,dni ,name ,lastName, poblation ,phone) VALUES (?, ?, ?, ?,?,?)";
+$sql__insert_clients = "INSERT INTO empleados  (dni ,name ,lastName, poblation ,phone) VALUES (?, ?, ?,?,?)";
 
 $stmt = $conn->prepare($sql__insert_clients);
-$stmt->bind_param('ssssss', $cif, $dni, $name, $lastName, $poblation, $phone);
+$stmt->bind_param('sssss', $dni, $name, $lastName, $poblation, $phone);
 
 $stmt->execute();
 
-echo "Empresa creada correctamente";
+echo "Trabajador creado correctamente";
 
 ?>
 

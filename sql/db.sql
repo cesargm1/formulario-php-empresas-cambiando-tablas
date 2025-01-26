@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS company;
-CREATE DATABASE company;
+DROP DATABASE IF EXISTS workers_commpany;
+CREATE DATABASE workers_commpany;
 
-USE company;
+USE workers_commpany;
 
 CREATE TABLE company (
 cif char(10) NOT NULL PRIMARY KEY,
@@ -11,10 +11,15 @@ cif char(10) NOT NULL PRIMARY KEY,
 
 CREATE TABLE empleados (
 dni char(9) NOT NULL PRIMARY KEY,
-cif char(10),
 name VARCHAR(50) NOT NULL,
 lastName VARCHAR(100) NOT NULL,
  poblation VARCHAR(100) NOT NULL,
  phone char(11),
- FOREIGN KEY(cif) REFERENCES company (cif) ON DELETE CASCADE ON UPDATE CASCADE 
-)
+);
+
+CREATE TABLE trabajar (
+    cif char(10) NOT NULL,
+    dni char(9) NOT NULL ,
+    FOREIGN KEY (cif) REFERENCES company (cif) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (dni) REFERENCES empleados	(dni) ON DELETE CASCADE ON UPDATE CASCADE
+);
